@@ -1,0 +1,20 @@
+Begin:
+    If (head == NULL) then
+        write ('List is already empty')
+    End if
+    Else then
+        toDelete ← head
+        secondLastNode ← head
+        While (toDelete.next != NULL) do
+            secondLastNode ← toDelete
+            toDelete ← toDelete.next
+        End while
+        If (toDelete == head) then
+            head ← NULL
+        End if
+        Else then
+            secondLastNode.next ← NULL
+        End else
+        unalloc (toDelete)
+    End else
+End
